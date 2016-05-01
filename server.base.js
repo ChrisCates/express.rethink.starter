@@ -8,7 +8,7 @@ module.exports = (config) => {
   const joi = require('joi')
 
   //RethinkDB
-  const r = require('rethinkdbdash')()
+  const r = require('rethinkdbdash')(config.r)
   require('rethink-config')({
     'r': r,
     'database': 'starter',
@@ -21,6 +21,10 @@ module.exports = (config) => {
     ]
   }, (err) => {
     if (err) throw err
+    if (process.env.TESTING_ENV == 'true') {
+      console.log('Testing mode so exiting')
+      process.exit()
+    }
   })
 
   //Redis Token && Redis Auth
