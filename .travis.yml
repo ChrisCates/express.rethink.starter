@@ -1,0 +1,23 @@
+language: node_js
+
+env:
+  NODE_ENV=development
+  TESTING_ENV=true
+
+node_js:
+  - "6"
+
+before_install:
+  - mysql -e "create database IF NOT EXISTS starter;" -uroot
+
+services:
+  - redis-server
+  - mysql
+
+before_script:
+  - npm install -g mocha
+  - npm install -g gulp
+
+script:
+  - node server.js
+  - npm run nyc
