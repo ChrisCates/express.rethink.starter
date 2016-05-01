@@ -1,6 +1,6 @@
-# Express Sequelize Redis starter pack [![Coverage Status](https://coveralls.io/repos/github/ChrisCates/express.rethink.starter/badge.svg?branch=master)](https://coveralls.io/github/ChrisCates/express.rethink.starter?branch=master) [![Build Status](https://travis-ci.org/ChrisCates/express.rethink.starter.svg?branch=master)](https://travis-ci.org/ChrisCates/express.rethink.starter)
+# Express RethinkDB Redis starter pack [![Coverage Status](https://coveralls.io/repos/github/ChrisCates/express.rethink.starter/badge.svg?branch=master)](https://coveralls.io/github/ChrisCates/express.rethink.starter?branch=master) [![Build Status](https://travis-ci.org/ChrisCates/express.rethink.starter.svg?branch=master)](https://travis-ci.org/ChrisCates/express.rethink.starter)
 
-## An Express, Sequelize, Redis Starter pack by Chris Cates
+## An Express, RethinkDB, Redis Starter pack by Chris Cates
 
 I've decided since I start so many projects the same way I should open source a starter pack for all to enjoy.
 
@@ -14,7 +14,7 @@ I've decided since I start so many projects the same way I should open source a 
 ### Installation Instructions
 
 1. Install node modules `npm install`.
-2. Install MySQL/MAMP.
+2. Install RethinkDB.
 3. Install Redis.
 4. Make sure `config.development.json` matches your environment settings
 
