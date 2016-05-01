@@ -64,7 +64,7 @@ describe('/user API', () => {
       .set('Accept', 'application/json')
       .send({
         'email': randomEmail,
-        'password': randomPassword + 1,
+        'password': randomPassword + 1 ,
         'grantType': grantType
       })
       .expect(500)
