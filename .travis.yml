@@ -1,8 +1,7 @@
 language: node_js
 
 env:
-  NODE_ENV=development
-  TESTING_ENV=true
+  NODE_ENV=development TESTING_ENV=true
 
 node_js:
   - "6"
