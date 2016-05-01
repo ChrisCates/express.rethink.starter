@@ -9,23 +9,6 @@ module.exports = (config) => {
 
   //RethinkDB
   const r = require('rethinkdbdash')(config.r)
-  require('rethink-config')({
-    'r': r,
-    'database': 'starter',
-    'tables': ['users'],
-    'indexes': [
-      {
-        'table': 'users',
-        'index': 'email'
-      }
-    ]
-  }, (err) => {
-    if (err) throw err
-    if (process.env.TESTING_ENV == 'true') {
-      console.log('Testing mode so exiting')
-      process.exit()
-    }
-  })
 
   //Redis Token && Redis Auth
   const redis = require('redis.token')(config.redis, (err) => { if (err) throw err })
