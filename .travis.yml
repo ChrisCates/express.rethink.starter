@@ -8,7 +8,7 @@ node_js:
   - "6"
 
 before_install:
-  - mysql -e "create database IF NOT EXISTS starter;" -uroot
+  - sudo add-apt-repository ppa:rethinkdb/ppa && sudo apt-get update && sudo apt-get install rethinkdb
 
 services:
   - redis-server
