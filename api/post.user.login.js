@@ -47,6 +47,7 @@ module.exports = (deps) => {
                     'email': User.email
                   },
                   (err, result) => {
+                    if (err) callback(err)
                     return res.status(200).send({
                       'status': 200,
                       'message': req.body.email + ' logged in as ' + req.body.grantType,
@@ -55,10 +56,16 @@ module.exports = (deps) => {
                   }
                 )
               } else {
-                callback('Your password was incorrect...')
+                return res.status(500).send({
+                  'status': 500,
+                  'message': 'Your password was incorrect...'
+                })
               }
             } else {
-              callback('User does not exist...')
+              return res.status(500).send({
+                'status': 500,
+                'message': 'User does not exist...'
+              })
             }
           })
         }

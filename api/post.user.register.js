@@ -46,7 +46,7 @@ module.exports = (deps) => {
         },
         //Insert into database
         (callback) => {
-          var password = bcrypt.hashSync(req.body.password, 10)
+          req.body.password = bcrypt.hashSync(req.body.password, 10)
           r.db('starter').table('users')
           .insert(req.body)
           .then(() => {

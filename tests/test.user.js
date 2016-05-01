@@ -43,7 +43,7 @@ describe('/user API', () => {
   })
 
   describe('POST /user/login', () => {
-    it('Should login the user successfully', () => {
+    it('Should login the user successfully', (done) => {
       request(app)
       .post('/user/login')
       .set('Accept', 'application/json')
@@ -64,7 +64,7 @@ describe('/user API', () => {
       .set('Accept', 'application/json')
       .send({
         'email': randomEmail,
-        'password': randomPassword + 1 ,
+        'password': randomPassword + 'oogabooga' ,
         'grantType': grantType
       })
       .expect(500)
