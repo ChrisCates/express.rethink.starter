@@ -1,3 +1,4 @@
+![express.rethink.starter](./express-banner2.png)
 # Express RethinkDB Redis starter pack [![Coverage Status](https://coveralls.io/repos/github/ChrisCates/express.rethink.starter/badge.svg?branch=master)](https://coveralls.io/github/ChrisCates/express.rethink.starter?branch=master) [![Build Status](https://travis-ci.org/ChrisCates/express.rethink.starter.svg?branch=master)](https://travis-ci.org/ChrisCates/express.rethink.starter)
 
 ## An Express, RethinkDB, Redis Starter pack by Chris Cates
